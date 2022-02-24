@@ -1,0 +1,105 @@
+/*----------------*/
+/*reset*/
+ /*https://piccalil.li/blog/a-modern-css-reset/*/
+/*----------------*/
+
+/*box sizing*/
+*,
+*::after,
+*::before {
+    boxing-sizing: border-box;
+}
+
+/*reset margins*/
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+figure,
+picture {
+    margin: 0;
+}
+
+ul[role='list'],
+ol[role='list'] {
+    list-style: none;
+}
+
+html:focus-within {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+}
+
+a: not([class]) {
+    text-decoration-skip-lnk: auto;
+}
+
+img,
+picture {
+    max-width: 100%;
+    display: block;
+}
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html:focus-within {
+    scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-itreation-count: 1 !important;
+        trasition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/*----------------*/
+/*utility class*/
+/*----------------*/
+
+.flex {
+    display: flex;
+    gap: var(--gap, 1rem);
+}
+
+.grid {
+    display: grid;
+    gap: var(--gap, 1rem);
+}
+
+.container {
+    padding-line: 2em;
+    /*only right and left*/
+    margin-inline: auto;
+    max-width: 80rem;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    white-space: nowrap:
+    border: 0;
+}
+
+
